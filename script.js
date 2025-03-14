@@ -33,8 +33,9 @@ mode.addEventListener("click", (e) => {
 
 // API setup
 
-const API_KEY = "Your API Key";
+ const API_KEY = "Your API Key";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
 // Initialize user message and file data
 const userData = {
   message: null,

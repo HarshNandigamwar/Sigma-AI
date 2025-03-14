@@ -32,6 +32,7 @@ body {
   color: rgb(255, 255, 255);
   background-color: black;
   border: none;
+  cursor: pointer;
 }
 .themes {
   margin-top: 5px;
@@ -54,7 +55,7 @@ body {
   justify-content: center;
 }
 .aTitle {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-left: 80px;
   justify-content: center;
   font-size: 50px;
@@ -67,13 +68,12 @@ body {
 .d2 {
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
+  margin-top: 20px;
   align-items: center;
   justify-content: center;
 }
 .at {
   justify-content: center;
-
   margin-left: 80px;
   font-weight: 600;
   background: linear-gradient(90deg, #28b0ff, #0f3);
@@ -101,13 +101,12 @@ body {
 .main {
   display: flex;
   flex-direction: row;
-  margin-top: 80px;
+  margin-top: 40px;
   align-items: center;
   justify-content: center;
 }
 .card1 {
   margin-left: 50px;
-
   position: none;
   width: 240px;
   height: 194px;
@@ -202,15 +201,7 @@ a:hover {
 #chatbot-toggler:hover {
   box-shadow: 0 0 0 3px rgb(103, 0, 248);
 }
-footer {
-  margin-top: 50px;
-  position: static;
-  display: flex;
-  align-items: center;
 
-  justify-content: center;
-  align-items: center;
-}
 #chatbot-toggler span {
   color: #ffffff;
   position: absolute;
@@ -224,9 +215,8 @@ body.show-chatbot #chatbot-toggler span:last-child {
 }
 .chatbot-popup {
   position: fixed;
-  bottom: 50px;
-  height: 690px;
-
+  bottom: 0px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-color: #131212;
@@ -261,7 +251,7 @@ body.show-chatbot .chatbot-popup {
   padding: 6px;
   fill: #00f735;
   flex-shrink: 0;
-  background: #000000;
+  background: #000;
   border-radius: 30%;
 }
 .header-info .logo-text {
@@ -315,9 +305,9 @@ body.show-chatbot .chatbot-popup {
   margin-bottom: 2px;
   align-self: flex-end;
   border-radius: 50%;
-  background: #000000;
+  border: 1px solid #fff;
+  background: #000;
 }
-
 .chat-body .message .message-text {
   padding: 12px 16px;
   max-width: 75%;
@@ -355,9 +345,7 @@ body.show-chatbot .chatbot-popup {
   width: 7px;
   opacity: 0.7;
   border-radius: 50%;
-
   background: rgb(0, 255, 30);
-
   animation: dotPulse 1.8s ease-in-out infinite;
 }
 .chat-body .bot-message .thinking-indicator .dot:nth-child(1) {
@@ -384,12 +372,9 @@ body.show-chatbot .chatbot-popup {
 }
 .chat-footer {
   position: absolute;
-
   bottom: 0;
-
   width: 100%;
   background: linear-gradient(60deg, rgb(255, 0, 51), rgb(0, 42, 255));
-
   padding: 15px 22px 20px;
 }
 .chat-footer .chat-form {
@@ -486,6 +471,7 @@ em-emoji-picker {
   width: 100%;
   max-width: 350px;
   visibility: hidden;
+
   max-height: 330px;
   transform: translateX(-50%);
 }
@@ -493,10 +479,11 @@ body.show-emoji-picker em-emoji-picker {
   visibility: visible;
 }
 /* Responsive media query for mobile screens */
-@media (max-width: 520px) {
+@media (max-width: 530px) {
   .AName {
     display: flex;
-    margin-right: 10px;
+    /* flex-direction: column; */
+    margin-right: 20px;
     justify-content: center;
     align-items: center;
   }
@@ -508,13 +495,22 @@ body.show-emoji-picker em-emoji-picker {
     margin-right: 50px;
   }
   .Gimg {
+    margin-left: 10px;
     height: 16px;
     width: 16px;
+  }
+  .main {
+    flex-direction: column;
   }
   .card1 {
     margin-left: 20px;
     height: 195px;
-    width: 160px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .chatBtn {
+    margin-top: 40px;
+    margin-right: 20px;
   }
   #chatbot-toggler {
     right: 20px;
