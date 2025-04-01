@@ -1,6 +1,6 @@
 ## 🎉✨ AI Chat-bot: Your Intelligent Conversation Partner ✨🎉
 
-Excited to share my latest project: an innovative AI chat-bot powered by the Google Gemini API! This chat-bot is designed to deliver a seamless and intuitive user experience. With its unique and user-friendly interface, it offers a modern aesthetic and functionality that truly stands out.  The responsive design ensures compatibility across all devices and screen sizes, providing a smooth and consistent interaction for every user. Built using HTML, CSS, and JavaScript, this project demonstrates clean code, efficient performance, and cutting-edge web development practices.
+Excited to share my latest project: an innovative AI chat-bot powered by the Google Gemini API! This chat-bot is designed to deliver a seamless and intuitive user experience. With its unique and user-friendly interface, it offers a modern aesthetic and functionality that truly stands out.  The responsive design ensures compatibility across all devices and screen sizes, providing a smooth and consistent interaction for every user. Built using HTML5, CSS3, and JavaScript, this project demonstrates clean code, efficient performance, and cutting-edge web development practices.
 
 ## ⭕ Key Features
 
