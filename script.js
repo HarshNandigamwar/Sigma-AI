@@ -12,28 +12,38 @@ let currMode = "dark";
 mode.addEventListener("click", (e) => {
   if (currMode === "dark") {
     currMode = "light";
-    document.querySelector("body").style.backgroundColor = "White";
+    document.querySelector("body").style.backgroundColor = "#beb6b6";
     document.querySelector("body").style.color = "black";
-    document.querySelector("#mode").style.backgroundColor = "white";
-    document.querySelector("#mode").style.color = "black";
+    document.querySelector("#mode").style.backgroundColor = "#1a1a1a";
+    document.querySelector("#mode").style.color = "#ffffff";
     document.querySelector(".mode-icon1").style.display = "none";
     document.querySelector(".mode-icon2").style.display = "block";
-    document.querySelector(".chatbot-popup ").style.backgroundColor = "white";
+    document.querySelector(".chatbot-popup ").style.backgroundColor = "#beb6b6";
+    const card1 = document.getElementById("c1");
+    card1.style.border = "3px solid blue";
+    const card2 = document.getElementById("c2");
+    card2.style.border = "3px solid blue";
+    console.log("light mode ");
   } else {
     currMode = "dark";
     document.querySelector("body").style.backgroundColor = "black";
-    document.querySelector("body").style.color = "white";
-    document.querySelector("#mode").style.backgroundColor = "black";
-    document.querySelector("#mode").style.color = "white";
+    document.querySelector("body").style.color = "#beb6b6";
+    document.querySelector("#mode").style.backgroundColor = "#1a1a1a";
+    document.querySelector("#mode").style.color = "#beb6b6";
     document.querySelector(".mode-icon1").style.display = "block";
     document.querySelector(".mode-icon2").style.display = "none";
     document.querySelector(".chatbot-popup ").style.backgroundColor = "black";
+    const card1 = document.getElementById("c1");
+    card1.style.border = "1.5px solid blue";
+    const card2 = document.getElementById("c2");
+    card2.style.border = "1.5px solid blue";
+    console.log("Dark mode");
   }
 });
 
 // API setup
 
- const API_KEY = "Your API Key";
+//const API_KEY = "Enter your API key";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 // Initialize user message and file data
