@@ -9,6 +9,16 @@ const closeChatbot = document.querySelector("#close-chatbot");
 const mode = document.querySelector("#mode");
 let currMode = "dark";
 
+//Check device is offline or not.
+const Net = navigator.onLine;
+if (Net) {
+  document.querySelector(".network").style.display = "none";
+} else {
+  document.querySelector(".network").style.display = "block";
+  document.querySelector(".network").innerHTML = "You are offline 🛜 ";
+}
+
+//Switch light & Dark mode
 mode.addEventListener("click", (e) => {
   if (currMode === "dark") {
     currMode = "light";
@@ -23,7 +33,6 @@ mode.addEventListener("click", (e) => {
     card1.style.border = "3px solid blue";
     const card2 = document.getElementById("c2");
     card2.style.border = "3px solid blue";
-    console.log("light mode ");
   } else {
     currMode = "dark";
     document.querySelector("body").style.backgroundColor = "black";
@@ -37,13 +46,12 @@ mode.addEventListener("click", (e) => {
     card1.style.border = "1.5px solid blue";
     const card2 = document.getElementById("c2");
     card2.style.border = "1.5px solid blue";
-    console.log("Dark mode");
   }
 });
 
 // API setup
 
-//const API_KEY = "Enter your API key";
+const API_KEY = "";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 // Initialize user message and file data
