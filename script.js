@@ -7,16 +7,20 @@ const fileCancelButton = fileUploadWrapper.querySelector("#file-cancel");
 const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 const mode = document.querySelector("#mode");
+const reload = document.querySelector("#netWork")
 let currMode = "dark";
 
-//Check device is offline or not.
-const Net = navigator.onLine;
-if (Net) {
-  document.querySelector(".network").style.display = "none";
-} else {
-  document.querySelector(".network").style.display = "block";
-  document.querySelector(".network").innerHTML = "You are offline 🛜 ";
+//Device network check.
+if(navigator.onLine){
+document.querySelector("#netWork").style.display = "none"
+}else{
+  document.querySelector("#netWork").style.display = "block"
 }
+// reloading page
+reload.addEventListener("click",(e) => {
+  window.location.reload();
+  
+})
 
 //Switch light & Dark mode
 mode.addEventListener("click", (e) => {
@@ -71,6 +75,8 @@ const createMessageElement = (content, ...classes) => {
   div.classList.add("message", ...classes);
   div.innerHTML = content;
   return div;
+  
+  
 };
 // Generate bot response using API
 const generateBotResponse = async (incomingMessageDiv) => {
@@ -120,6 +126,7 @@ const generateBotResponse = async (incomingMessageDiv) => {
 };
 // Handle outgoing user messages
 const handleOutgoingMessage = (e) => {
+  
   e.preventDefault();
   userData.message = messageInput.value.trim();
   messageInput.value = "";
@@ -232,5 +239,6 @@ closeChatbot.addEventListener("click", () =>
 );
 chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
+
 );
 d;

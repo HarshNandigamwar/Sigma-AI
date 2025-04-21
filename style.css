@@ -13,14 +13,17 @@ body {
   color: white;
   background-color: black;
 }
-.network {
-  height: 50px;
-  width: 100vh;
-  padding-top: 10px;
-  padding-left: 45%;
-  background-color: red;
-  font-size: larger;
-  display: block;
+
+#netWork{
+  margin-top: 10px;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #00ff00;
+  display: none;
 }
 .head {
   padding: 5px;
