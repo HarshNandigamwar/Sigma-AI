@@ -351,7 +351,7 @@ body.show-chatbot .chatbot-popup {
 }
 .chat-body .user-message .message-text {
   color: #fff;
-  background: #5350c4;
+  background: #359f17;
   border-radius: 13px 13px 3px 13px;
 }
 .chat-body .user-message .attachment {
@@ -368,30 +368,32 @@ body.show-chatbot .chatbot-popup {
   height: 7px;
   width: 7px;
   opacity: 0.7;
-  border-radius: 50%;
-  background: rgb(0, 255, 30);
-  animation: dotPulse 1.8s ease-in-out infinite;
+  border-radius: 5px;
+  animation: dotPulse 1s ease-in-out infinite;
 }
 .chat-body .bot-message .thinking-indicator .dot:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .chat-body .bot-message .thinking-indicator .dot:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
 }
 .chat-body .bot-message .thinking-indicator .dot:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 @keyframes dotPulse {
   0%,
   44% {
     transform: translateY(0);
+    background-color: red;
   }
   28% {
-    opacity: 0.4;
-    transform: translateY(-4px);
+    opacity: 0.9;
+    transform: translateY(-30px);
+    background-color: blue;
   }
   44% {
     opacity: 0.2;
+    background-color: rgb(0, 255, 0);
   }
 }
 .chat-footer {
