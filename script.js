@@ -10,17 +10,20 @@ const mode = document.querySelector("#mode");
 const reload = document.querySelector("#netWork")
 let currMode = "dark";
 
-//Device network check.
+setInterval(() =>{
+  //Device network check.
 if(navigator.onLine){
-document.querySelector("#netWork").style.display = "none"
-}else{
-  document.querySelector("#netWork").style.display = "block"
-}
-// reloading page
-reload.addEventListener("click",(e) => {
-  window.location.reload();
-  
-})
+  document.querySelector("#netWork").style.display = "none"
+  }else{
+    document.querySelector("#netWork").style.display = "block"
+  }
+  // reloading page
+  reload.addEventListener("click",(e) => {
+    window.location.reload();
+    })
+}, 2000);
+
+
 
 //Switch light & Dark mode
 mode.addEventListener("click", (e) => {
