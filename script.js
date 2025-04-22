@@ -21,7 +21,7 @@ if(navigator.onLine){
   reload.addEventListener("click",(e) => {
     window.location.reload();
     })
-}, 2000);
+}, 1000);
 
 
 

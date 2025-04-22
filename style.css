@@ -15,8 +15,8 @@ body {
 }
 
 #netWork{
+  width: 100%;
   margin-top: 10px;
-  margin-left: 30%;
   margin-bottom: 10px;
   background-color: #ff0000;
   color: #ffffff;
