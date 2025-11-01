@@ -7,23 +7,21 @@ const fileCancelButton = fileUploadWrapper.querySelector("#file-cancel");
 const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 const mode = document.querySelector("#mode");
-const reload = document.querySelector("#netWork")
+const reload = document.querySelector("#netWork");
 let currMode = "dark";
 
-setInterval(() =>{
+setInterval(() => {
   //Device network check.
-if(navigator.onLine){
-  document.querySelector("#netWork").style.display = "none"
-  }else{
-    document.querySelector("#netWork").style.display = "block"
+  if (navigator.onLine) {
+    document.querySelector("#netWork").style.display = "none";
+  } else {
+    document.querySelector("#netWork").style.display = "block";
   }
   // reloading page
-  reload.addEventListener("click",(e) => {
+  reload.addEventListener("click", (e) => {
     window.location.reload();
-    })
+  });
 }, 1000);
-
-
 
 //Switch light & Dark mode
 mode.addEventListener("click", (e) => {
@@ -59,7 +57,7 @@ mode.addEventListener("click", (e) => {
 // API setup
 
 const API_KEY = "";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 // Initialize user message and file data
 const userData = {
@@ -78,8 +76,6 @@ const createMessageElement = (content, ...classes) => {
   div.classList.add("message", ...classes);
   div.innerHTML = content;
   return div;
-  
-  
 };
 // Generate bot response using API
 const generateBotResponse = async (incomingMessageDiv) => {
@@ -122,14 +118,16 @@ const generateBotResponse = async (incomingMessageDiv) => {
     messageElement.style.color = "#ff0000";
   } finally {
     // Reset user's file data, removing thinking indicator and scroll chat to bottom
-    userData.file = {};
+    userData.file = {
+      data: null,
+      mime_type: null,
+    };
     incomingMessageDiv.classList.remove("thinking");
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
   }
 };
 // Handle outgoing user messages
 const handleOutgoingMessage = (e) => {
-  
   e.preventDefault();
   userData.message = messageInput.value.trim();
   messageInput.value = "";
@@ -242,6 +240,5 @@ closeChatbot.addEventListener("click", () =>
 );
 chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
-
 );
 d;
